@@ -283,6 +283,8 @@ local function initGroupObject(data)
 
         TriggerEvent("prp-bridge:server:groupDisbanded", private.uuid)
 
+        groups[private.uuid] = nil
+
         private.members = {}
         private.leader = nil
         private.activity = nil
