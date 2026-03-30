@@ -88,6 +88,10 @@ function inv.getItemImageUrl(itemName)
     return ("https://cfx-nui-inventory_images/images/%s.webp"):format(itemName)
 end
 
+function inv.disarm()
+    SetCurrentPedWeapon(cache.ped, `WEAPON_UNARMED`, true)
+end
+
 if bridge.name == bridge.currentResource then
     RegisterNetEvent("prp-bridge:inv:forceClose", function()
         exports["tgiann-inventory"]:CloseInventory()

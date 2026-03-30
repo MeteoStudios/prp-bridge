@@ -61,6 +61,10 @@ function inv.getItemImageUrl(itemName)
     return ("https://cfx-nui-ox_inventory/web/images/%s.png"):format(itemName)
 end
 
+function inv.disarm()
+    TriggerEvent('ox_inventory:disarm', true)
+end
+
 if bridge.name == bridge.currentResource then
     RegisterNetEvent("prp-bridge:inv:forceClose", function()
         exports.ox_inventory:closeInventory()
